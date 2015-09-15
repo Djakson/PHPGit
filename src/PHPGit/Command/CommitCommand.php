@@ -46,7 +46,9 @@ class CommitCommand extends Command
         $options = $this->resolve($options);
         $builder = $this->git->getProcessBuilder()
             ->add('commit')
-            ->add('-m')->add($message);
+            ->add('-m')->add($message)
+            ->add('--no-verify')
+            ;
 
         $this->addFlags($builder, $options, array('all', 'amend'));
         $this->addValues($builder, $options, array('reuse-message', 'squash', 'author', 'date', 'cleanup'));
