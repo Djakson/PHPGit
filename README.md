@@ -20,7 +20,7 @@ Update your composer.json and run `composer update`
 ``` json
 {
     "require": {
-        "kzykhys/git": "dev-master"
+        "vestnik/phpgit": "dev-master"
     }
 }
 ```
